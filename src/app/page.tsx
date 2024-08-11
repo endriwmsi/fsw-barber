@@ -6,6 +6,7 @@ import BarbershopItem from "./_components/barbershop-item";
 import BookingItem from "./_components/booking-item";
 import { quickSearchOptions } from "./_constants/quickSearchOptions";
 import SearchItem from "./_components/search-item";
+import WelcomeItem from "./_components/welcome-item";
 
 const Home = async () => {
   const barbershops = await db.barbershop.findMany({});
@@ -22,11 +23,7 @@ const Home = async () => {
 
       {/* texto */}
       <div className="p-5">
-        <h2 className="text-xl">
-          Olá,
-          <strong> Endriw!</strong>
-        </h2>
-        <p>Segunda-feira, 08 de agosto.</p>
+        <WelcomeItem />
 
         {/* busca */}
         <div className="mt-6">
